@@ -6,4 +6,4 @@ Zadanie 1
 
 Kod: link do kodu
 
-link do filmiku(?)
+(OPCJONALNIE) link do filmiku(?)
