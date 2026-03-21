@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin - Kategorie{% endblock %}
+
+{% block body %}
+<h1>Zarządzanie kategoriami</h1>
+<a href="/admin" class="btn btn-secondary mb-3">Powrót do panelu</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nazwa</th>
+            <th>Opis</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for category in categories %}
+        <tr>
+            <td>{{ category.id }}</td>
+            <td>{{ category.name }}</td>
+            <td>{{ category.description }}</td>
+            <td>
+                <a href="/admin/category/{{ category.id }}/edit" class="btn btn-sm btn-warning">Edytuj</a>
+                <form action="/admin/category/{{ category.id }}/delete" method="POST" style="display:inline">
+                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Usunąć?')">Usuń</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

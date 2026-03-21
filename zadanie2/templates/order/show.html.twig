@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Zamówienie #{{ order.id }}{% endblock %}
+
+{% block body %}
+<h1>Zamówienie #{{ order.id }}</h1>
+<div class="card">
+    <div class="card-body">
+        <p><strong>Klient:</strong> {{ order.customerName }}</p>
+        <p><strong>Status:</strong> <span class="badge bg-{{ order.status == 'new' ? 'primary' : (order.status == 'completed' ? 'success' : 'secondary') }}">{{ order.status }}</span></p>
+        <p><strong>Kwota:</strong> {{ order.totalPrice }} zł</p>
+        <p><strong>Data:</strong> {{ order.createdAt|date('Y-m-d H:i') }}</p>
+        <h5 class="mt-3">Produkty:</h5>
+        {% if order.products|length > 0 %}
+        <ul>
+            {% for product in order.products %}
+            <li><a href="/product/{{ product.id }}">{{ product.name }}</a> - {{ product.price }} zł</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>Brak produktów.</p>
+        {% endif %}
+    </div>
+</div>
+<a href="/order" class="btn btn-secondary mt-3">Powrót</a>
+<a href="/order/{{ order.id }}/edit" class="btn btn-warning mt-3">Edytuj</a>
+{% endblock %}

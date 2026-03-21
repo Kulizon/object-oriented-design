@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block body %}
+<h1>{{ product.name }}</h1>
+<div class="card">
+    <div class="card-body">
+        <p><strong>ID:</strong> {{ product.id }}</p>
+        <p><strong>Opis:</strong> {{ product.description }}</p>
+        <p><strong>Cena:</strong> {{ product.price }} zł</p>
+        <p><strong>Kategoria:</strong> {{ product.category ? product.category.name : '-' }}</p>
+    </div>
+</div>
+<a href="/product" class="btn btn-secondary mt-3">Powrót</a>
+<a href="/product/{{ product.id }}/edit" class="btn btn-warning mt-3">Edytuj</a>
+{% endblock %}

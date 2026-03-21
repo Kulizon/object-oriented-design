@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panel administracyjny{% endblock %}
+
+{% block body %}
+<h1>Panel administracyjny</h1>
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Produkty</h5>
+                <p class="card-text display-4">{{ product_count }}</p>
+                <a href="/admin/products" class="btn btn-light">Zarządzaj</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Kategorie</h5>
+                <p class="card-text display-4">{{ category_count }}</p>
+                <a href="/admin/categories" class="btn btn-light">Zarządzaj</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Zamówienia</h5>
+                <p class="card-text display-4">{{ order_count }}</p>
+                <a href="/admin/orders" class="btn btn-light">Zarządzaj</a>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="/logout" class="btn btn-danger mt-3">Wyloguj</a>
+{% endblock %}

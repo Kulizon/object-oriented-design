@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Kategorie{% endblock %}
+
+{% block body %}
+<h1>Kategorie</h1>
+<a href="/category/new" class="btn btn-primary mb-3">Dodaj kategorię</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nazwa</th>
+            <th>Opis</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for category in categories %}
+        <tr>
+            <td>{{ category.id }}</td>
+            <td>{{ category.name }}</td>
+            <td>{{ category.description }}</td>
+            <td>
+                <a href="/category/{{ category.id }}" class="btn btn-sm btn-info">Pokaż</a>
+                <a href="/category/{{ category.id }}/edit" class="btn btn-sm btn-warning">Edytuj</a>
+                <form action="/category/{{ category.id }}/delete" method="POST" style="display:inline">
+                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Usunąć?')">Usuń</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

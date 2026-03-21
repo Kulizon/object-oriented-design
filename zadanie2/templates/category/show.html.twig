@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block body %}
+<h1>{{ category.name }}</h1>
+<div class="card">
+    <div class="card-body">
+        <p><strong>ID:</strong> {{ category.id }}</p>
+        <p><strong>Opis:</strong> {{ category.description }}</p>
+        <h5 class="mt-3">Produkty w tej kategorii:</h5>
+        {% if category.products|length > 0 %}
+        <ul>
+            {% for product in category.products %}
+            <li><a href="/product/{{ product.id }}">{{ product.name }}</a> - {{ product.price }} zł</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>Brak produktów.</p>
+        {% endif %}
+    </div>
+</div>
+<a href="/category" class="btn btn-secondary mt-3">Powrót</a>
+<a href="/category/{{ category.id }}/edit" class="btn btn-warning mt-3">Edytuj</a>
+{% endblock %}

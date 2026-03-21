@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Zamówienia{% endblock %}
+
+{% block body %}
+<h1>Zamówienia</h1>
+<a href="/order/new" class="btn btn-primary mb-3">Nowe zamówienie</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Klient</th>
+            <th>Status</th>
+            <th>Kwota</th>
+            <th>Data</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.customerName }}</td>
+            <td><span class="badge bg-{{ order.status == 'new' ? 'primary' : (order.status == 'completed' ? 'success' : 'secondary') }}">{{ order.status }}</span></td>
+            <td>{{ order.totalPrice }} zł</td>
+            <td>{{ order.createdAt|date('Y-m-d H:i') }}</td>
+            <td>
+                <a href="/order/{{ order.id }}" class="btn btn-sm btn-info">Pokaż</a>
+                <a href="/order/{{ order.id }}/edit" class="btn btn-sm btn-warning">Edytuj</a>
+                <form action="/order/{{ order.id }}/delete" method="POST" style="display:inline">
+                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Usunąć?')">Usuń</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
