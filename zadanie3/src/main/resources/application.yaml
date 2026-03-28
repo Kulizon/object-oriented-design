@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+auth:
+  # Choose singleton type: "eager" or "lazy"
+  singleton-type: eager
