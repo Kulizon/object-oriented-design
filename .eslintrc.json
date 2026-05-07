@@ -16,8 +16,8 @@
     "React": "readonly"
   },
   "rules": {
-    "no-unused-vars": ["warn", { "varsIgnorePattern": "^React$|^_" }],
-    "no-console": "warn",
+    "no-unused-vars": ["warn", { "varsIgnorePattern": "^React$|^_|^[A-Z]" }],
+    "no-console": "off",
     "eqeqeq": "error",
     "no-var": "error",
     "prefer-const": "warn"

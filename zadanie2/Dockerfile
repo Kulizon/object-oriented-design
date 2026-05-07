@@ -2,13 +2,11 @@ FROM kprzystalski/projobj-php:latest
 
 USER root
 
-RUN a2enmod rewrite
-
 WORKDIR /app
 
 COPY composer.json composer.lock ./
 
-RUN composer install --no-scripts --optimize-autoloader --no-interaction
+RUN a2enmod rewrite && composer install --no-scripts --optimize-autoloader --no-interaction
 
 COPY . .
 
