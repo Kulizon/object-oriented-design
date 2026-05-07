@@ -2,7 +2,7 @@
 #   ./run.sh lazy         - uruchamia z LAZY singletonem
 #   ./run.sh eager        - uruchamia z EAGER singletonem
 
-if [ -f "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
+if [[ -f "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
     source "$HOME/.sdkman/bin/sdkman-init.sh"
     sdk use java 17.0.18-tem 2>/dev/null
 fi

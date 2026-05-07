@@ -71,5 +71,6 @@ class AdminUser implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function eraseCredentials()
     {
+        // This method is intentionally empty - no temporary sensitive data to erase.
     }
 }

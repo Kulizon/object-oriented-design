@@ -1,0 +1,67 @@
+name: CI - Lint & CodeQL
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  eslint:
+    name: ESLint (JavaScript)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Install zadanie5 client dependencies
+        run: cd zadanie5/client && npm ci
+
+      - name: Install zadanie5 server dependencies
+        run: cd zadanie5/server && npm ci
+
+      - name: Run ESLint
+        run: npx eslint 'zadanie5/**/*.{js,jsx}' --no-error-on-unmatched-pattern --ignore-pattern 'zadanie5/client/build/**' --ignore-pattern 'zadanie5/**/node_modules/**'
+
+  codeql:
+    name: CodeQL Analysis
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [javascript-typescript, go]
+        include:
+          - language: javascript-typescript
+            build-mode: none
+          - language: go
+            build-mode: manual
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+
+      - name: Build Go
+        if: matrix.language == 'go'
+        run: |
+          cd zadanie4
+          go build ./...
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{ matrix.language }}"

@@ -15,12 +15,12 @@
                 {% endif %}
                 <form action="{{ path('app_login') }}" method="POST">
                     <div class="mb-3">
-                        <label class="form-label">Login</label>
-                        <input type="text" name="_username" class="form-control" value="{{ last_username }}" required autofocus>
+                        <label class="form-label" for="_username">Login</label>
+                        <input type="text" name="_username" id="_username" class="form-control" value="{{ last_username }}" required autofocus>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Hasło</label>
-                        <input type="password" name="_password" class="form-control" required>
+                        <label class="form-label" for="_password">Hasło</label>
+                        <input type="password" name="_password" id="_password" class="form-control" required>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Zaloguj</button>
                 </form>

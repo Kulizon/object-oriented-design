@@ -1,0 +1,20 @@
+{
+  "name": "object-oriented-design",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "lint:js": "eslint 'zadanie5/**/*.{js,jsx}' --no-error-on-unmatched-pattern",
+    "lint:js:fix": "eslint 'zadanie5/**/*.{js,jsx}' --fix --no-error-on-unmatched-pattern"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "husky": "^9.1.0",
+    "lint-staged": "^15.2.0"
+  },
+  "lint-staged": {
+    "zadanie5/**/*.{js,jsx}": [
+      "eslint --fix --no-error-on-unmatched-pattern"
+    ]
+  }
+}

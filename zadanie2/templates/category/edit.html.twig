@@ -6,12 +6,12 @@
 <h1>Edytuj kategorię: {{ category.name }}</h1>
 <form method="POST">
     <div class="mb-3">
-        <label class="form-label">Nazwa</label>
-        <input type="text" name="name" class="form-control" value="{{ category.name }}" required>
+        <label class="form-label" for="name">Nazwa</label>
+        <input type="text" name="name" id="name" class="form-control" value="{{ category.name }}" required>
     </div>
     <div class="mb-3">
-        <label class="form-label">Opis</label>
-        <textarea name="description" class="form-control">{{ category.description }}</textarea>
+        <label class="form-label" for="description">Opis</label>
+        <textarea name="description" id="description" class="form-control">{{ category.description }}</textarea>
     </div>
     <button type="submit" class="btn btn-primary">Zapisz</button>
     <a href="/category" class="btn btn-secondary">Anuluj</a>

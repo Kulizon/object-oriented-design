@@ -24,5 +24,6 @@ class SecurityController extends AbstractController
     #[Route('/logout', name: 'app_logout')]
     public function logout(): void
     {
+        // This method is intentionally empty - it will be intercepted by the logout key on the firewall.
     }
 }

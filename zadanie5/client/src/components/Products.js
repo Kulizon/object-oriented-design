@@ -7,7 +7,9 @@ export default function Products() {
   const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
-    fetchProducts().then((res) => setProducts(res.data));
+    fetchProducts()
+      .then((res) => setProducts(res.data))
+      .catch((err) => console.error("Failed to fetch products:", err));
   }, []);
 
   return (

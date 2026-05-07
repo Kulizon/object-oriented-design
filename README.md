@@ -1,3 +1,5 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Kulizon_object-oriented-design&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Kulizon_object-oriented-design)
+
 Zadanie 1
 ✅ 3.0 Procedura do generowania 50 losowych liczb od 0 do 100.
 ✅ 3.5 Procedura do sortowania liczb.
@@ -36,3 +38,10 @@ Zadanie 5
 ✅ 4.0 Przekazywanie danych między komponentami przez React hooks (useState, useEffect, useContext)
 ✅ 4.5 Konfiguracja Docker + docker-compose dla klienta i serwera
 ✅ 5.0 Axios do komunikacji z serwerem oraz obsługa CORS
+
+Zadanie 8
+✅ 3.0 Należy skonfigurować husky + lint-staged uruchamianie lintowania przed commitem
+✅ 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji klienckiej)
+⬜ 4.0 Przeskanować oraz naprawić dowolny projekt open source narzędziem CodeQL
+✅ 4.5 Należy usunąć problemy typu Code Smell w kodzie w Sonarze (kotlin, go, js). Należy dodać badge z Sonara
+✅ 5.0 Skonfigurować Github Actions z linterem oraz CodeQL

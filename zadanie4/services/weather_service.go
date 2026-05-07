@@ -8,9 +8,17 @@ import (
 	"strings"
 	"time"
 
+	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
 	"gorm.io/gorm"
 	"zadanie4/models"
 )
+
+var titleCaser = cases.Title(language.English)
+
+func toTitleCase(s string) string {
+	return titleCaser.String(strings.ToLower(s))
+}
 
 type WeatherProvider interface {
 	GetWeather(location string) (*models.Weather, error)
@@ -30,7 +38,7 @@ func (s *ExternalWeatherService) GetWeather(location string) (*models.Weather, e
 	if err != nil || resp.StatusCode != http.StatusOK {
 		// Fallback
 		return &models.Weather{
-			Location:    strings.Title(strings.ToLower(location)),
+			Location:    toTitleCase(location),
 			Temperature: 0,
 			Condition:   "API unavailable - Fallback",
 			Source:      "External Mock API",
@@ -58,7 +66,7 @@ func (s *ExternalWeatherService) GetWeather(location string) (*models.Weather, e
 	}
 
 	return &models.Weather{
-		Location:    strings.Title(strings.ToLower(location)),
+		Location:    toTitleCase(location),
 		Temperature: temp,
 		Condition:   cond,
 		Source:      "External API (wttr.in)",
@@ -72,7 +80,7 @@ type WeatherProxy struct {
 }
 
 func (p *WeatherProxy) GetWeather(location string) (*models.Weather, error) {
-	normalizedLoc := strings.Title(strings.ToLower(location))
+	normalizedLoc := toTitleCase(location)
 	var weather models.Weather
 
 	err := p.DB.Where("location = ?", normalizedLoc).First(&weather).Error
