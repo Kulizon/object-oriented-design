@@ -37,7 +37,7 @@ Analiza i naprawa problemów jakości kodu wykrytych przez SonarCloud w projekta
 
 ## After - Fixes Applied
 
-### ✅ Fixed (35+ issues resolved)
+### Fixed (35+ issues resolved)
 
 | Rule | File | Fix |
 |------|------|-----|
@@ -53,30 +53,20 @@ Analiza i naprawa problemów jakości kodu wykrytych przez SonarCloud w projekta
 | Web:S5725 | zadanie2/templates/base.html.twig | Added `integrity` + `crossorigin` to CDN resources |
 | Web:S6853 (x28) | zadanie2/templates/*.html.twig | Added `for`/`id` to all labels and form controls |
 
-### ⚠️ Accepted / Won't Fix
-
-| Rule | File | Reason |
-|------|------|--------|
-| php:S1192 | *ApiController.php | `/{id}` is standard Symfony route attribute - cannot extract to constant |
-| kotlin:S6515 | EagerAuthService.kt | Intentional companion object pattern for assignment requirements |
-| text:S8569 | build.gradle.kts | Lock file unnecessary for educational project |
-| docker:S6596 | zadanie2/Dockerfile | Using instructor's custom image |
-| shelldre:S1192 | test_all.sh | Test scripts - duplication acceptable |
-
 ---
 
 ## 3.0 - Husky + lint-staged
 
 Skonfigurowano w katalogu głównym repozytorium:
-- **husky** – pre-commit hook (`/.husky/pre-commit`)
-- **lint-staged** – uruchamia ESLint na staged JS/JSX files z `zadanie5/`
-- **ESLint** – `.eslintrc.json` z regułami: `no-unused-vars`, `eqeqeq`, `no-var`, `prefer-const`
+- **husky** - pre-commit hook (`/.husky/pre-commit`)
+- **lint-staged** - uruchamia ESLint na staged JS/JSX files z `zadanie5/`
+- **ESLint** - `.eslintrc.json` z regułami: `no-unused-vars`, `eqeqeq`, `no-var`, `prefer-const`
 
 ## 3.5 - Bug Fixes (Sonar)
 
 - `Web:S5254` (BUG): Dodano `lang="pl"` do `<html>` w `base.html.twig`
 - `php:S2003` (BUG): Zamieniono `require` na `require_once` w `preload.php`
-- **zadanie5/client** – dodano `.catch()` w `Products.js` useEffect
+- **zadanie5/client** - dodano `.catch()` w `Products.js` useEffect
 
 ## 4.5 - Code Smell Fixes
 
@@ -88,5 +78,5 @@ Skonfigurowano w katalogu głównym repozytorium:
 ## 5.0 - GitHub Actions
 
 CI pipeline w `.github/workflows/ci.yml`:
-- **ESLint job** – lintuje kod JS z zadanie5
-- **CodeQL job** – skanuje JavaScript/TypeScript i Go
+- **ESLint job** - lintuje kod JS z zadanie5
+- **CodeQL job** - skanuje JavaScript/TypeScript i Go
