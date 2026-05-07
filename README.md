@@ -29,3 +29,10 @@ Zadanie 4
 ✅ 4.0 Należy stworzyć klasę proxy, która pobierze dane z serwisu zewnętrznego podczas zapytania do naszego kontrolera
 ✅ 4.5 Należy zapisać pobrane dane z zewnątrz do bazy danych
 ✅ 5.0 Należy rozszerzyć endpoint na więcej niż jedną lokalizację (Pogoda), lub akcje (Giełda) zwracając JSONa
+
+Zadanie 5
+✅ 3.0 Komponenty Produkty (pobieranie z serwera) oraz Płatności (wysyłanie do serwera)
+✅ 3.5 Komponent Koszyk z osobnym widokiem; routing pomiędzy widokami
+✅ 4.0 Przekazywanie danych między komponentami przez React hooks (useState, useEffect, useContext)
+✅ 4.5 Konfiguracja Docker + docker-compose dla klienta i serwera
+✅ 5.0 Axios do komunikacji z serwerem oraz obsługa CORS
