@@ -15,6 +15,9 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/api/order')]
 class OrderApiController extends AbstractController
 {
+    private const ROUTE_ID = '/{id}';
+    private const ID_REQUIREMENT = ['id' => '\d+'];
+
     #[Route('', methods: ['GET'])]
     public function index(OrderRepository $repository): JsonResponse
     {
@@ -23,7 +26,7 @@ class OrderApiController extends AbstractController
         return $this->json($data);
     }
 
-    #[Route('/{id}', methods: ['GET'], requirements: ['id' => '\d+'])]
+    #[Route(self::ROUTE_ID, methods: ['GET'], requirements: self::ID_REQUIREMENT)]
     public function show(Order $order): JsonResponse
     {
         return $this->json($order->toArray());
@@ -57,7 +60,7 @@ class OrderApiController extends AbstractController
         return $this->json($order->toArray(), Response::HTTP_CREATED);
     }
 
-    #[Route('/{id}', methods: ['PUT'], requirements: ['id' => '\d+'])]
+    #[Route(self::ROUTE_ID, methods: ['PUT'], requirements: self::ID_REQUIREMENT)]
     public function update(Request $request, Order $order, EntityManagerInterface $em): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
@@ -87,7 +90,7 @@ class OrderApiController extends AbstractController
         return $this->json($order->toArray());
     }
 
-    #[Route('/{id}', methods: ['DELETE'], requirements: ['id' => '\d+'])]
+    #[Route(self::ROUTE_ID, methods: ['DELETE'], requirements: self::ID_REQUIREMENT)]
     public function delete(Order $order, EntityManagerInterface $em): JsonResponse
     {
         $em->remove($order);
