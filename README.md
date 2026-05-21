@@ -39,9 +39,18 @@ Zadanie 5
 ✅ 4.5 Konfiguracja Docker + docker-compose dla klienta i serwera
 ✅ 5.0 Axios do komunikacji z serwerem oraz obsługa CORS
 
-Zadanie 8
+Zadanie 6
 ✅ 3.0 Należy skonfigurować husky + lint-staged uruchamianie lintowania przed commitem
 ✅ 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji klienckiej)
-⬜ 4.0 Przeskanować oraz naprawić dowolny projekt open source narzędziem CodeQL
+❌ 4.0 Przeskanować oraz naprawić dowolny projekt open source narzędziem CodeQL
 ✅ 4.5 Należy usunąć problemy typu Code Smell w kodzie w Sonarze (kotlin, go, js). Należy dodać badge z Sonara
 ✅ 5.0 Skonfigurować Github Actions z linterem oraz CodeQL
+
+Zadanie 7
+✅ 3.0 Należy stworzyć kontroler wraz z modele Produktów zgodny z CRUD w
+ORM Fluent
+✅ 3.5 Należy stworzyć szablony w Leaf
+✅ 4.0 Należy stworzyć drugi model oraz kontroler Kategorii wraz z
+relacją
+✅ 4.5 Należy wykorzystać Redis do przechowywania danych
+✅ 5.0 Wrzucić aplikację na heroku

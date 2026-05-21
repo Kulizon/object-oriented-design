@@ -1,0 +1,25 @@
+#extend("base"):
+    #export("title", "Produkty")
+    #export("content"):
+        <h1>Produkty</h1>
+        <a href="/products/create" class="btn btn-primary mb-3">Dodaj produkt</a>
+        <table class="table table-striped">
+            <thead><tr><th>Nazwa</th><th>Cena</th><th>Kategoria</th><th>Akcje</th></tr></thead>
+            <tbody>
+                #for(product in products):
+                    <tr>
+                        <td>#(product.name)</td>
+                        <td>#(product.price) zł</td>
+                        <td>#(product.category.name)</td>
+                        <td>
+                            <a href="/products/#(product.id)/edit" class="btn btn-sm btn-warning">Edytuj</a>
+                            <form action="/products/#(product.id)/delete" method="POST" style="display:inline">
+                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Usunąć?')">Usuń</button>
+                            </form>
+                        </td>
+                    </tr>
+                #endfor
+            </tbody>
+        </table>
+    #endexport
+#endextend

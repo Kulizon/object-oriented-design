@@ -1,0 +1,26 @@
+#extend("base"):
+    #export("title", "Nowe zamówienie")
+    #export("content"):
+        <h1>Nowe zamówienie</h1>
+        <form method="POST" action="/orders">
+            <div class="mb-3">
+                <label for="customer_name" class="form-label">Klient</label>
+                <input type="text" class="form-control" id="customer_name" name="customer_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="quantity" class="form-label">Ilość</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" min="1" required>
+            </div>
+            <div class="mb-3">
+                <label for="product_id" class="form-label">Produkt</label>
+                <select class="form-select" id="product_id" name="product_id" required>
+                    #for(product in products):
+                        <option value="#(product.id)">#(product.name)</option>
+                    #endfor
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Zapisz</button>
+            <a href="/orders" class="btn btn-secondary">Anuluj</a>
+        </form>
+    #endexport
+#endextend

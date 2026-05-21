@@ -1,0 +1,25 @@
+#extend("base"):
+    #export("title", "Zamówienia")
+    #export("content"):
+        <h1>Zamówienia</h1>
+        <a href="/orders/create" class="btn btn-primary mb-3">Nowe zamówienie</a>
+        <table class="table table-striped">
+            <thead><tr><th>Klient</th><th>Produkt</th><th>Ilość</th><th>Akcje</th></tr></thead>
+            <tbody>
+                #for(order in orders):
+                    <tr>
+                        <td>#(order.customerName)</td>
+                        <td>#(order.product.name)</td>
+                        <td>#(order.quantity)</td>
+                        <td>
+                            <a href="/orders/#(order.id)/edit" class="btn btn-sm btn-warning">Edytuj</a>
+                            <form action="/orders/#(order.id)/delete" method="POST" style="display:inline">
+                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Usunąć?')">Usuń</button>
+                            </form>
+                        </td>
+                    </tr>
+                #endfor
+            </tbody>
+        </table>
+    #endexport
+#endextend
