@@ -11,6 +11,8 @@ export default function Navbar() {
       <Link to="/">Produkty</Link>
       <Link to="/cart">Koszyk ({count})</Link>
       <Link to="/payment">Płatności</Link>
+      <Link to="/register">Rejestracja</Link>
+      <Link to="/login">Logowanie</Link>
     </nav>
   );
 }

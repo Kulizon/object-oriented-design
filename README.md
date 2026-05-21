@@ -54,3 +54,10 @@ ORM Fluent
 relacją
 ✅ 4.5 Należy wykorzystać Redis do przechowywania danych
 ❌ 5.0 Wrzucić aplikację na heroku
+
+Zadanie 8
+✅ 3.0 Test walidacji formularza rejestracji (Selenium) - pola obowiązkowe, nieprawidłowy email
+✅ 3.5 Testy bezpieczeństwa XSS w aplikacji React (Selenium)
+✅ 4.0 Test koszyka w wielu kartach przeglądarki (spójność stanu)
+✅ 4.5 Formularz logowania + testy CSRF (Selenium)
+✅ 5.0 Scenariusz End-to-End w Playwright (70 asercji)
