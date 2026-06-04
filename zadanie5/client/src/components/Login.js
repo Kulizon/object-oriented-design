@@ -14,10 +14,11 @@ export default function Login() {
       setError("Wypełnij wszystkie pola");
       return;
     }
-    // Mock login - store session token
-    const token = btoa(`${form.email}:${Date.now()}`);
+    // Mock login - store session token (sanitized)
+    const sanitizedEmail = form.email.replace(/[^a-zA-Z0-9@._-]/g, "");
+    const token = btoa(`${sanitizedEmail}:${Date.now()}`);
     sessionStorage.setItem("auth_token", token);
-    sessionStorage.setItem("user_email", form.email);
+    sessionStorage.setItem("user_email", sanitizedEmail);
     setLoggedIn(true);
   };
 

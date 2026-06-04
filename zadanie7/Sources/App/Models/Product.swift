@@ -16,7 +16,7 @@ final class Product: Model, Content, @unchecked Sendable {
     @Parent(key: "category_id")
     var category: Category
 
-    init() {}
+    init() { /* Required by Fluent for model initialization */ }
 
     init(id: UUID? = nil, name: String, price: Double, categoryID: UUID) {
         self.id = id

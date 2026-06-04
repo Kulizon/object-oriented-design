@@ -93,12 +93,12 @@ class TestXSSProductSearch:
     def test_xss_via_url_hash(self, driver, payload):
         """Próba XSS przez URL hash."""
         driver.get(f"{APP_URL}/#{payload}")
-        safe, msg = check_no_alert(driver)
+        safe, _ = check_no_alert(driver)
         assert safe, f"XSS via URL hash: {payload}"
 
     @pytest.mark.parametrize("payload", XSS_PAYLOADS[:4])
     def test_xss_via_url_param(self, driver, payload):
         """Próba XSS przez URL query param."""
         driver.get(f"{APP_URL}/?q={payload}")
-        safe, msg = check_no_alert(driver)
+        safe, _ = check_no_alert(driver)
         assert safe, f"XSS via URL param: {payload}"

@@ -3,6 +3,8 @@ import Fluent
 import Redis
 
 struct CategoryController: RouteCollection {
+    private static let basePath = "/categories"
+
     func boot(routes: RoutesBuilder) throws {
         let categories = routes.grouped("categories")
         categories.get(use: index)
@@ -58,7 +60,7 @@ struct CategoryController: RouteCollection {
         let category = Category(name: input.name)
         try await category.save(on: req.db)
         await invalidateCache(on: req)
-        return req.redirect(to: "/categories")
+        return req.redirect(to: Self.basePath)
     }
 
     func editForm(req: Request) async throws -> View {
@@ -76,7 +78,7 @@ struct CategoryController: RouteCollection {
         category.name = input.name
         try await category.save(on: req.db)
         await invalidateCache(on: req)
-        return req.redirect(to: "/categories")
+        return req.redirect(to: Self.basePath)
     }
 
     func delete(req: Request) async throws -> Response {
@@ -85,7 +87,7 @@ struct CategoryController: RouteCollection {
         }
         try await category.delete(on: req.db)
         await invalidateCache(on: req)
-        return req.redirect(to: "/categories")
+        return req.redirect(to: Self.basePath)
     }
 }
 

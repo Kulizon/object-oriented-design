@@ -1,5 +1,5 @@
 # Build stage
-FROM swift:5.9-jammy as build
+FROM swift:5.9-jammy AS build
 WORKDIR /app
 COPY Package.swift .
 COPY Sources ./Sources

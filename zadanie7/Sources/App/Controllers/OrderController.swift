@@ -3,6 +3,8 @@ import Fluent
 import Redis
 
 struct OrderController: RouteCollection {
+    private static let basePath = "/orders"
+
     func boot(routes: RoutesBuilder) throws {
         let orders = routes.grouped("orders")
         orders.get(use: index)
@@ -32,7 +34,7 @@ struct OrderController: RouteCollection {
         let order = Order(customerName: input.customerName, quantity: input.quantity, productID: input.productID)
         try await order.save(on: req.db)
         await invalidateCache(on: req)
-        return req.redirect(to: "/orders")
+        return req.redirect(to: Self.basePath)
     }
 
     func editForm(req: Request) async throws -> View {
@@ -53,7 +55,7 @@ struct OrderController: RouteCollection {
         order.$product.id = input.productID
         try await order.save(on: req.db)
         await invalidateCache(on: req)
-        return req.redirect(to: "/orders")
+        return req.redirect(to: Self.basePath)
     }
 
     func delete(req: Request) async throws -> Response {
@@ -62,7 +64,7 @@ struct OrderController: RouteCollection {
         }
         try await order.delete(on: req.db)
         await invalidateCache(on: req)
-        return req.redirect(to: "/orders")
+        return req.redirect(to: Self.basePath)
     }
 }
 

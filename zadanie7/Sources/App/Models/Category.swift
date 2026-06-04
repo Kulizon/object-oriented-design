@@ -13,7 +13,7 @@ final class Category: Model, Content, @unchecked Sendable {
     @Children(for: \.$category)
     var products: [Product]
 
-    init() {}
+    init() { /* Required by Fluent for model initialization */ }
 
     init(id: UUID? = nil, name: String) {
         self.id = id

@@ -16,7 +16,7 @@ final class Order: Model, Content, @unchecked Sendable {
     @Parent(key: "product_id")
     var product: Product
 
-    init() {}
+    init() { /* Required by Fluent for model initialization */ }
 
     init(id: UUID? = nil, customerName: String, quantity: Int, productID: UUID) {
         self.id = id
