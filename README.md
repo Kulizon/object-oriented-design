@@ -46,8 +46,7 @@ Kod: [`zadanie2/`](https://github.com/Kulizon/object-oriented-design/tree/main/z
 
 https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie2.mov
 
-
-
+https://github.com/user-attachments/assets/c57e877d-2380-4797-9d1d-a0453e9b794d
 
 ---
 
@@ -72,6 +71,8 @@ Kod: [`zadanie3/`](https://github.com/Kulizon/object-oriented-design/tree/main/z
 
 https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie3.mov
 
+https://github.com/user-attachments/assets/db1329df-7efd-4979-a0b8-5f3666bf5848
+
 ---
 
 ## Zadanie 4
@@ -94,6 +95,8 @@ https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie
 Kod: [`zadanie4/`](https://github.com/Kulizon/object-oriented-design/tree/main/zadanie4)
 
 https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie4.mov
+
+https://github.com/user-attachments/assets/51bb94fa-6c10-456b-80a9-2f8f0705ae67
 
 ---
 
@@ -118,6 +121,8 @@ Kod: [`zadanie5/`](https://github.com/Kulizon/object-oriented-design/tree/main/z
 
 https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie5.mov
 
+https://github.com/user-attachments/assets/789c0f47-8e9d-4101-82e1-811973c4bbdf
+
 ---
 
 ## Zadanie 6
@@ -140,6 +145,8 @@ Kod: [`.github/workflows/ci.yml`](https://github.com/Kulizon/object-oriented-des
 
 https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie6.mov
 
+https://github.com/user-attachments/assets/69b40beb-e512-412b-a199-74ac6a61913a
+
 ---
 
 ## Zadanie 7
@@ -161,6 +168,8 @@ https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie
 Kod: [`zadanie7/`](https://github.com/Kulizon/object-oriented-design/tree/main/zadanie7)
 
 https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie7.mov
+
+https://github.com/user-attachments/assets/8c2cb5fa-08c5-4934-887b-7f0c761d9c62
 
 ---
 
@@ -185,6 +194,8 @@ Kod: [`zadanie8/`](https://github.com/Kulizon/object-oriented-design/tree/main/z
 
 https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie8.mov
 
+https://github.com/user-attachments/assets/875e8239-23fe-4329-8c85-9cffc3cce579
+
 ---
 
 ## Zadanie 9
@@ -207,3 +218,6 @@ https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie
 Kod: [`zadanie9/`](https://github.com/Kulizon/object-oriented-design/tree/main/zadanie9) · [`.github/workflows/zadanie9-azure.yml`](https://github.com/Kulizon/object-oriented-design/blob/main/.github/workflows/zadanie9-azure.yml)
 
 https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie9.mov
+
+https://github.com/user-attachments/assets/3ab5803a-0949-46b2-8c22-cd3138ebf498
+
