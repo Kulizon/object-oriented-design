@@ -19,4 +19,4 @@ echo ""
 echo "=== Wszystkie testy zakończone ==="
 
 
-# source venv/bin/activate && APP_URL=http://localhost:3000 pytest -v -n auto
+# source .venv/bin/activate && APP_URL=http://localhost:3000 pytest -v -n auto
