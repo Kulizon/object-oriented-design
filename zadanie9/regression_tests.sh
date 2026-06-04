@@ -26,7 +26,7 @@ echo "Target: $BASE_URL"
 echo ""
 
 # Health / homepage
-check "Homepage loads" "/"
+check "Homepage loads" "/" 303
 
 # Category endpoints
 check "GET /categories" "/categories"
