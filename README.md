@@ -20,6 +20,7 @@
 Kod: [`zadanie1/`](https://github.com/Kulizon/object-oriented-design/tree/main/zadanie1)
 
 https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie1.mov
+
 https://github.com/user-attachments/assets/d8e39a3e-b865-4fc6-853f-d836ee243c76
 
 ---
