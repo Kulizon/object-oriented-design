@@ -8,9 +8,12 @@ RUN swift build -c release
 
 # Run stage
 FROM swift:5.9-jammy-slim
+RUN useradd --create-home appuser
 WORKDIR /app
 COPY --from=build /app/.build/release/App .
 COPY Resources ./Resources
+RUN chown -R appuser:appuser /app
+USER appuser
 ENV SWIFT_BACKTRACE=enable=yes
 EXPOSE 8080
 ENTRYPOINT ["./App"]

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ALLOWED_EMAIL_PATTERN = /^[a-zA-Z0-9@._+-]+$/;
+const ALLOWED_EMAIL_PATTERN = /^[a-zA-Z0-9@.\-_+]+$/;
 
 function sanitizeForStorage(input) {
   if (typeof input !== "string") return "";
