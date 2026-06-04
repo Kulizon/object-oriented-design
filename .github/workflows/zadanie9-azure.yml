@@ -6,6 +6,7 @@ on:
     paths:
       - "zadanie7/**"
       - ".github/workflows/zadanie9-azure.yml"
+      - "zadanie9/regression_tests.sh"
   workflow_dispatch:
 
 env:
