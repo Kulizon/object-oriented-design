@@ -27,7 +27,7 @@ echo ""
 
 echo "Waiting for app to become available (retrying for up to 90 seconds)..."
 for i in {1..18}; do
-  if curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/" | grep -q "200\|404"; then
+  if curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/" | grep -q "200\|404\|303"; then
     echo "App is up!"
     break
   fi
