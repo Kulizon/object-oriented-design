@@ -25,6 +25,17 @@ echo "=== Regression Tests for zadanie7 ==="
 echo "Target: $BASE_URL"
 echo ""
 
+echo "Waiting for app to become available (retrying for up to 90 seconds)..."
+for i in {1..18}; do
+  if curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/" | grep -q "200\|404"; then
+    echo "App is up!"
+    break
+  fi
+  echo -n "."
+  sleep 5
+done
+echo ""
+
 # Health / homepage
 check "Homepage loads" "/" 303
 
