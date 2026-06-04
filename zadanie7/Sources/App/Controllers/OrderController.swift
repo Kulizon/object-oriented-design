@@ -3,10 +3,10 @@ import Fluent
 import Redis
 
 struct OrderController: RouteCollection {
-    private static let basePath = "/orders"
+    private static let basePath = "/" + RoutePaths.orders
 
     func boot(routes: RoutesBuilder) throws {
-        let orders = routes.grouped("orders")
+        let orders = routes.grouped(PathComponent(stringLiteral: RoutePaths.orders))
         orders.get(use: index)
         orders.get("create", use: createForm)
         orders.post(use: create)

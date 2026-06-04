@@ -1,6 +1,10 @@
 import Vapor
 
-private let defaultRedirect = "/products"
+enum RoutePaths {
+    static let categories = "categories"
+    static let products = "products"
+    static let orders = "orders"
+}
 
 func routes(_ app: Application) throws {
     try app.register(collection: CategoryController())
@@ -8,6 +12,6 @@ func routes(_ app: Application) throws {
     try app.register(collection: OrderController())
 
     app.get { req -> Response in
-        req.redirect(to: defaultRedirect)
+        req.redirect(to: "/" + RoutePaths.products)
     }
 }

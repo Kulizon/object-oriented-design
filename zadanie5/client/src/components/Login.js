@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 
+const ALLOWED_EMAIL_PATTERN = /^[a-zA-Z0-9@._+-]+$/;
+
+function sanitizeForStorage(input) {
+  if (typeof input !== "string") return "";
+  if (!ALLOWED_EMAIL_PATTERN.test(input)) return "";
+  return String(input);
+}
+
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
@@ -14,11 +22,14 @@ export default function Login() {
       setError("Wypełnij wszystkie pola");
       return;
     }
-    // Mock login - store session token (sanitized)
-    const sanitizedEmail = form.email.replace(/[^a-zA-Z0-9@._-]/g, "");
-    const token = btoa(`${sanitizedEmail}:${Date.now()}`);
+    const cleanEmail = sanitizeForStorage(form.email);
+    if (!cleanEmail) {
+      setError("Nieprawidłowy format email");
+      return;
+    }
+    const token = btoa(cleanEmail + ":" + Date.now().toString());
     sessionStorage.setItem("auth_token", token);
-    sessionStorage.setItem("user_email", sanitizedEmail);
+    sessionStorage.setItem("user_email", cleanEmail);
     setLoggedIn(true);
   };
 

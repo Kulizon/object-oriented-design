@@ -3,10 +3,10 @@ import Fluent
 import Redis
 
 struct CategoryController: RouteCollection {
-    private static let basePath = "/categories"
+    private static let basePath = "/" + RoutePaths.categories
 
     func boot(routes: RoutesBuilder) throws {
-        let categories = routes.grouped("categories")
+        let categories = routes.grouped(PathComponent(stringLiteral: RoutePaths.categories))
         categories.get(use: index)
         categories.get("create", use: createForm)
         categories.post(use: create)
