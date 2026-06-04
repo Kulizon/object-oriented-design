@@ -1,6 +1,7 @@
 package pl.edu.kkula.zadanie3.controller
 
 import org.springframework.http.ResponseEntity
+import org.springframework.context.annotation.Lazy
 import org.springframework.web.bind.annotation.*
 import pl.edu.kkula.zadanie3.model.AuthRequest
 import pl.edu.kkula.zadanie3.model.AuthResponse
@@ -10,6 +11,7 @@ import pl.edu.kkula.zadanie3.service.AuthService
 @RestController
 @RequestMapping("/api")
 class MainController(
+    @Lazy
     private val authService: AuthService
 ) {
 
