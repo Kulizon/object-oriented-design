@@ -2,19 +2,19 @@
 
 ## Zadanie 1
 
-✅ 3.0 Procedura do generowania 50 losowych liczb od 0 do 100
+✅ 3.0 Procedura do generowania 50 losowych liczb od 0 do 100.
 [`GenerateRandomNumbers`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie1/main.pas#L8-L14)
 
-✅ 3.5 Procedura do sortowania liczb
+✅ 3.5 Procedura do sortowania liczb.
 [`BubbleSort`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie1/main.pas#L16-L28)
 
-✅ 4.0 Dodanie parametrów do procedury losującej określającymi zakres losowania: od, do, ile
+✅ 4.0 Dodanie parametrów do procedury losującej określającymi zakres losowania: od, do, ile.
 [`GenerateRandomNumbers(min, max, count)`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie1/main.pas#L8-L14)
 
-✅ 4.5 Dodanie testów jednostkowych testujących procedury
+✅ 4.5 Dodanie testów jednostkowych testujących procedury.
 [Testy](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie1/main.pas#L30-L93)
 
-✅ 5.0 Skrypt w bashu do uruchamiania aplikacji w Pascalu via Docker
+✅ 5.0 Skrypt w bashu do uruchamiania aplikacji w Pascalu via docker.
 [`run.sh`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie1/run.sh#L1-L3)
 
 Kod: [`zadanie1/`](https://github.com/Kulizon/object-oriented-design/tree/main/zadanie1)
@@ -25,19 +25,19 @@ https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie
 
 ## Zadanie 2
 
-✅ 3.0 Jeden model z kontrolerem Produktów zgodny z CRUD (JSON)
+✅ 3.0 Należy stworzyć jeden model z kontrolerem z produktami, zgodnie z CRUD (JSON)
 [`ProductApiController`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie2/src/Controller/ProductApiController.php#L1-L88)
 
-✅ 3.5 Skrypty do testów endpointów via curl (JSON)
+✅ 3.5 Należy stworzyć skrypty do testów endpointów via curl (JSON)
 [`test_product.sh`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie2/tests/test_product.sh#L1-L46)
 
-✅ 4.0 Dwa dodatkowe kontrolery wraz z modelami (JSON)
+✅ 4.0 Należy stworzyć dwa dodatkowe kontrolery wraz z modelami (JSON)
 [`CategoryApiController`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie2/src/Controller/CategoryApiController.php#L1-L74) · [`OrderApiController`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie2/src/Controller/OrderApiController.php#L1-L101)
 
-✅ 4.5 Widoki do wszystkich kontrolerów
+✅ 4.5 Należy stworzyć widoki do wszystkich kontrolerów
 [`ProductController` (widoki)](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie2/src/Controller/ProductController.php#L1-L95) · [`templates/product/`](https://github.com/Kulizon/object-oriented-design/tree/main/zadanie2/templates/product)
 
-✅ 5.0 Panel administracyjny
+✅ 5.0 Stworzenie panelu administracyjnego
 [`AdminController`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie2/src/Controller/AdminController.php#L1-L155) · [`templates/admin/`](https://github.com/Kulizon/object-oriented-design/tree/main/zadanie2/templates/admin)
 
 Kod: [`zadanie2/`](https://github.com/Kulizon/object-oriented-design/tree/main/zadanie2)
@@ -48,19 +48,19 @@ https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie
 
 ## Zadanie 3
 
-✅ 3.0 Kontroler z danymi wyświetlanymi z listy na endpoincie w formacie JSON
+✅ 3.0 Należy stworzyć jeden kontroler wraz z danymi wyświetlanymi z listy na endpoint'cie w formacie JSON - Kotlin + Spring Boot
 [`MainController /api/users`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie3/src/main/kotlin/pl/edu/kkula/zadanie3/controller/MainController.kt#L17-L30)
 
-✅ 3.5 Klasa do autoryzacji (mock) jako Singleton w formie eager
+✅ 3.5 Należy stworzyć klasę do autoryzacji (mock) jako Singleton w formie eager
 [`EagerAuthService`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie3/src/main/kotlin/pl/edu/kkula/zadanie3/service/EagerAuthService.kt#L1-L46)
 
-✅ 4.0 Obsługa danych autoryzacji przekazywanych przez użytkownika
+✅ 4.0 Należy obsłużyć dane autoryzacji przekazywane przez użytkownika
 [`MainController /api/login`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie3/src/main/kotlin/pl/edu/kkula/zadanie3/controller/MainController.kt#L32-L37)
 
-✅ 4.5 Wstrzyknięcie singletona do głównej klasy via constructor injection
+✅ 4.5 Należy wstrzyknąć singleton do głównej klasy via @Autowired lub kontruktor (constructor injection)
 [`MainController(authService)`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie3/src/main/kotlin/pl/edu/kkula/zadanie3/controller/MainController.kt#L13-L16)
 
-✅ 5.0 Wersja Singletona w wersji lazy (do wyboru obok eager)
+✅ 5.0 Obok wersji Eager do wyboru powinna być wersja Singletona w wersji lazy
 [`LazyAuthService`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie3/src/main/kotlin/pl/edu/kkula/zadanie3/service/LazyAuthService.kt#L1-L43) · [`AuthServiceConfig`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie3/src/main/kotlin/pl/edu/kkula/zadanie3/config/AuthServiceConfig.kt#L1-L35)
 
 Kod: [`zadanie3/`](https://github.com/Kulizon/object-oriented-design/tree/main/zadanie3)
@@ -71,19 +71,19 @@ https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie
 
 ## Zadanie 4
 
-✅ 3.0 Kontroler Pogody pozwalający na pobieranie danych o pogodzie
+✅ 3.0 Należy stworzyć aplikację we frameworku echo w j. Go, która będzie miała kontroler Pogody, która pozwala na pobieranie danych o pogodzie (lub akcjach giełdowych)
 [`WeatherController`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie4/controllers/weather_controller.go#L1-L40)
 
-✅ 3.5 Model Pogoda z gorm, dane załadowane z listy przy uruchomieniu
+✅ 3.5 Należy stworzyć model Pogoda (lub Giełda) wykorzystując gorm, a dane załadować z listy przy uruchomieniu
 [`Weather` model](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie4/models/weather.go#L1-L12)
 
-✅ 4.0 Klasa proxy pobierająca dane z serwisu zewnętrznego
+✅ 4.0 Należy stworzyć klasę proxy, która pobierze dane z serwisu zewnętrznego podczas zapytania do naszego kontrolera
 [`ExternalWeatherService`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie4/services/weather_service.go#L28-L76)
 
-✅ 4.5 Zapis pobranych danych z zewnątrz do bazy danych
+✅ 4.5 Należy zapisać pobrane dane z zewnątrz do bazy danych
 [`WeatherProxy` (cache DB)](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie4/services/weather_service.go#L79-L101)
 
-✅ 5.0 Endpoint na więcej niż jedną lokalizację zwracając JSONa
+✅ 5.0 Należy rozszerzyć endpoint na więcej niż jedną lokalizację (Pogoda), lub akcje (Giełda) zwracając JSONa
 [`GetWeather` (multi-location)](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie4/controllers/weather_controller.go#L17-L40)
 
 Kod: [`zadanie4/`](https://github.com/Kulizon/object-oriented-design/tree/main/zadanie4)
@@ -117,15 +117,15 @@ https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie
 
 ## Zadanie 6
 
-✅ 3.0 Konfiguracja husky + lint-staged uruchamianie lintowania przed commitem
+✅ 3.0 Należy skonfigurować husky + lint-staged uruchamianie lintowania przed commitem
 [`package.json` (lint-staged)](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/package.json)
 
-✅ 3.5 Wyeliminowanie wszystkich bugów w kodzie w Sonarze (kod aplikacji klienckiej)
+✅ 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji klienckiej)
 [`Login.js` (sanitize)](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie5/client/src/components/Login.js) · [`Register.js`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie5/client/src/components/Register.js)
 
 ❌ 4.0 Przeskanować oraz naprawić dowolny projekt open source narzędziem CodeQL
 
-✅ 4.5 Usunięcie problemów typu Code Smell w kodzie w Sonarze (kotlin, go, js). Badge z Sonara
+✅ 4.5 Należy usunąć problemy typu Code Smell w kodzie w Sonarze (kotlin, go, js). Należy dodać badge z Sonara
 [Badge (góra README)](#) · [`RoutePaths` enum (Swift)](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie7/Sources/App/routes.swift#L1-L17)
 
 ✅ 5.0 Skonfigurować Github Actions z linterem oraz CodeQL
@@ -139,16 +139,16 @@ https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie
 
 ## Zadanie 7
 
-✅ 3.0 Kontroler wraz z modelem Produktów zgodny z CRUD w ORM Fluent
+✅ 3.0 Należy stworzyć kontroler wraz z modele Produktów zgodny z CRUD w ORM Fluent
 [`ProductController`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie7/Sources/App/Controllers/ProductController.swift#L1-L91) · [`Product` model](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie7/Sources/App/Models/Product.swift#L1-L42)
 
-✅ 3.5 Szablony w Leaf
+✅ 3.5 Należy stworzyć szablony w Leaf
 [`configure.swift`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie7/Sources/App/configure.swift#L1-L30)
 
-✅ 4.0 Drugi model oraz kontroler Kategorii wraz z relacją
+✅ 4.0 Należy stworzyć drugi model oraz kontroler Kategorii wraz z relacją
 [`CategoryController`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie7/Sources/App/Controllers/CategoryController.swift#L1-L96) · [`Category` model](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie7/Sources/App/Models/Category.swift#L1-L35)
 
-✅ 4.5 Wykorzystanie Redis do przechowywania danych
+✅ 4.5 Należy wykorzystać Redis do przechowywania danych
 [`ProductController` (Redis cache)](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie7/Sources/App/Controllers/ProductController.swift#L1-L91)
 
 ❌ 5.0 Wrzucić aplikację na heroku
@@ -161,7 +161,7 @@ https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie
 
 ## Zadanie 8
 
-✅ 3.0 Test walidacji formularza rejestracji (Selenium) — pola obowiązkowe, nieprawidłowy email
+✅ 3.0 Test walidacji formularza rejestracji (Selenium) - pola obowiązkowe, nieprawidłowy email
 [`test_registration.py`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie8/test_registration.py#L1-L118)
 
 ✅ 3.5 Testy bezpieczeństwa XSS w aplikacji React (Selenium)
@@ -184,19 +184,19 @@ https://github.com/Kulizon/object-oriented-design/raw/main/presentations/zadanie
 
 ## Zadanie 9
 
-✅ 3.0 Instancje Docker w chmurze Azure (Web App for Containers + ACR)
+✅ 3.0 Należy stworzyć odpowiednie instancje po stronie chmury na dockerze
 [`zadanie7/Dockerfile`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie7/Dockerfile)
 
-✅ 3.5 Pipeline w GitHub Actions do budowania aplikacji
+✅ 3.5 Stworzyć odpowiedni pipeline w Github Actions do budowania aplikacji
 [`zadanie9-azure.yml` (build job)](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/.github/workflows/zadanie9-azure.yml#L17-L44)
 
-✅ 4.0 Notyfikacja mailowa o zbudowaniu aplikacji
+✅ 4.0 Dodać notyfikację mailową o zbudowaniu aplikacji
 [`zadanie9-azure.yml` (notify job)](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/.github/workflows/zadanie9-azure.yml#L75-L97)
 
-✅ 4.5 Deploy aplikacji serwerowej na chmurę (https://oob.azurewebsites.net/products)
+✅ 4.5 Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę (https://oob.azurewebsites.net/products)
 [`zadanie9-azure.yml` (deploy job)](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/.github/workflows/zadanie9-azure.yml#L46-L53)
 
-✅ 5.0 Uruchomienie regresyjnych testów automatycznych (funkcjonalnych) jako krok w Actions
+✅ 5.0 Dodać uruchomienie regresyjnych testów automatycznych (funkcjonalnych) jako krok w Actions
 [`regression_tests.sh`](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/zadanie9/regression_tests.sh#L1-L63) · [`zadanie9-azure.yml` (regression-tests job)](https://github.com/Kulizon/object-oriented-design/blob/74c12497972f18573910d8983ed2d7b728baaccc/.github/workflows/zadanie9-azure.yml#L55-L73)
 
 Kod: [`zadanie9/`](https://github.com/Kulizon/object-oriented-design/tree/main/zadanie9) · [`.github/workflows/zadanie9-azure.yml`](https://github.com/Kulizon/object-oriented-design/blob/main/.github/workflows/zadanie9-azure.yml)
